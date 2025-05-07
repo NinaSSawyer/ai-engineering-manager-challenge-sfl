@@ -42,7 +42,7 @@ curl -X POST -H "Content-Type: application/json" \
 http://localhost:5000/predict
 ```
 
-** Files **
+**Files**
 
 * model_training.py – Model pipeline and persistence
 * model_serving/app.py – Flask API endpoint

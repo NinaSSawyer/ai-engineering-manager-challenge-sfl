@@ -4,7 +4,7 @@ This section contains a modular, phased work plan for implementing ChemBERTa at 
 
 ## Contents
 
-- `nina_sawyer_bpc_chemberta_workplan.pdf` – Slide deck with executive summary, Gantt chart, cost table, and architecture diagram.
+- `nina_sawyer_bpc_chemberta_workplan.pdf` – Statement document with executive summary, Gantt chart, cost table, and architecture diagram.
 
 ## Objective
 
@@ -16,6 +16,6 @@ Design a realistic roadmap to help BPC integrate ChemBERTa for molecular fingerp
 
 ## Deliverables
 
-- PENDING-slide summary deck
+- Executive summary deck
 - Defined phases, roles, tools, and costs
 - Modularity for incremental implementation
