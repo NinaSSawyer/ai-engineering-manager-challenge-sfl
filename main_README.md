@@ -5,7 +5,9 @@ This repository contains my completed technical assessment for the AI Engineerin
 ## Repository Structure
 
 ==> Section1_ETL/ # Database setup & Python ETL pipeline
+
 ==> Section2_ModelDeployment/ # ML model training & deployment as an API
+
 ==> Section3_Management/ # Work plan for implementing ChemBERTa
 
 
