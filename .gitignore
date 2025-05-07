@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and outputs
+*.log
+*.out
+
+# Virtual environments
+venv/
+env/
+
+# Docker
+*.pid
+*.tar
+docker-compose.override.yml
+
+# OS-specific
+.DS_Store
+Thumbs.db
