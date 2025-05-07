@@ -1,54 +1,51 @@
-# Section 1 – Database Configuration & Python ETL #
+# Section 2 – ML Model Deployment #
 
-This section provisions a PostgreSQL database using Docker and implements a Python ETL pipeline to ingest, transform, and load the provided Excel dataset.
+This section demonstrates deployment of a machine learning model (Fashion MNIST) as an API service using Flask and Docker.
 
 ## Tools & Technologies ##
 
-- PostgreSQL (Docker)
 - Python 3.10
-- pandas
-- SQLAlchemy
-- docker-compose
-- openpyxl
+- scikit-learn
+- Flask
+- Docker
 
-## Getting Started ##
+## Getting Started ## 
 
-### 1. Launch the Database ###
-
-Use Docker Compose to start the PostgreSQL container.
+### 1. Train the Model ###
 
 ```
 bash
-docker-compose up -d
-
-This will start a database on localhost:5432 with the following credentials:
-
-    User: nina
-
-    Password: password123
-
-    Database: challenge_db
-```
-
-### 2. Run the ETL Script ###
-
-```
 pip install -r requirements.txt
-python etl_pipeline.py
+python model_training.py
 ```
 
-This script performs the following:
-1. Loads and cleans the provided Excel dataset
-2. Performs basic transformations
-3. Loads the result into a PostgreSQL table named chemberta_dataset
+This script downloads Fashion MNIST data, trains a simple classifier, and saves the model to disk.
 
-### 3. Notes ###
+### 2. Run the Inference API (Docker) ###
 
-The .env file is used to manage DB credentials.
+```
+cd model_serving
+docker build -t model-api .
+docker run -p 5000:5000 model-api
+```
 
-The database schema will be created automatically if it doesn't exist.
+The API will be available at:
+http://localhost:5000/predict
 
-**Files**
-* etl_pipeline.py – Main ETL process
-* docker-compose.yml – PostgreSQL container configuration
+### 3. Example Request ###
+
+Use a tool like Postman or curl:
+
+```
+curl -X POST -H "Content-Type: application/json" \
+-d @predict_example.json \
+http://localhost:5000/predict
+```
+
+** Files **
+
+* model_training.py – Model pipeline and persistence
+* model_serving/app.py – Flask API endpoint
+* model_serving/Dockerfile – Container definition
+* predict_example.json – Sample payload
 * requirements.txt – Python dependencies
