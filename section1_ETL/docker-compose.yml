@@ -1,0 +1,21 @@
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_etl
+    environment:
+      POSTGRES_USER: nina
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: challenge_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+    # Credentials for database access
+    # username: nina
+    # password: password123
+    # database: challenge_db
+
+volumes:
+  pgdata:
