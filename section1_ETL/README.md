@@ -20,15 +20,14 @@ Use Docker Compose to start the PostgreSQL container.
 ```
 bash
 docker-compose up -d
-
-This will start a database on localhost:5432 with the following credentials:
-
-    User: nina
-
-    Password: password123
-
-    Database: challenge_db
 ```
+This will start a database on `localhost:5432` with the following credentials:
+
+- User: `nina`
+- Password: `password123`
+- Database: `challenge_db`
+
+> **Note:** These credentials are for a local development environment only. In a production setting, environment variables and secret managers (e.g., AWS Secrets Manager, Vault) should be used.
 
 ### 2. Run the ETL Script ###
 
