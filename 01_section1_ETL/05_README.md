@@ -1,53 +1,63 @@
 # Section 1 – Database Configuration & Python ETL #
 
-This section provisions a PostgreSQL database using Docker and implements a Python ETL pipeline to ingest, transform, and load the provided Excel dataset.
+This section provisions a PostgreSQL database using Docker and demonstrates a complete ETL (Extract, Transform, Load) workflow using Python. It includes data ingestion from an Excel file, enrichment through transformations, and loading into a PostgreSQL container.
 
-## Tools & Technologies ##
+## Files ##
 
-- PostgreSQL (Docker)
-- Python 3.10
-- pandas
-- SQLAlchemy
-- docker-compose
-- openpyxl
+- `docker-compose.yml` – Configures and launches a PostgreSQL container for local development
+- `requirements.txt` – Lists all Python dependencies for this ETL pipeline
+- `section1_etl_notebook.ipynb` – Main deliverable; contains code, commentary, visualizations, and transformation steps
+- `etl_pipeline.py` – Optional standalone script version of the ETL logic (can be run without Jupyter)
+- `README.md` – This file
 
-## Getting Started ##
+## Setup Instructions ##
 
-### 1. Launch the Database ###
+### 1. Start the PostgreSQL Database ###
+Run the following command from the `section1_ETL` directory:
 
-Use Docker Compose to start the PostgreSQL container.
-
-```
-bash
+```bash
 docker-compose up -d
 ```
-This will start a database on `localhost:5432` with the following credentials:
 
-- User: `nina`
+This will start a PostgreSQL instance locally at:
+- Host: `localhost`
+- Port: `5432`
+- Username: `nina`
 - Password: `password123`
 - Database: `challenge_db`
 
-> **Note:** These credentials are for a local development environment only. In a production setting, environment variables and secret managers (e.g., AWS Secrets Manager, Vault) should be used.
+> **Note:** These credentials are for local development only. In production, secrets should be managed via environment variables or secure vaults.
 
-### 2. Run the ETL Script ###
+### 2. Install Python Dependencies ###
 
-```
+Use the included requirements file to install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Run the Notebook ###
+Open `section1_etl_notebook.ipynb` in Jupyter or VS Code and follow each cell to:
+- Load the Excel file
+- Inspect and clean the data
+- Apply transformations (e.g., email domain classification, gender grouping)
+- Visualize results
+- Load the final dataset into the PostgreSQL table: `chemberta_dataset`
+
+### 4. Optional: Run ETL as a Script ###
+
+If preferred, you can run the ETL outside the notebook:
+
+```bash
 python etl_pipeline.py
 ```
 
-This script performs the following:
-1. Loads and cleans the provided Excel dataset
-2. Performs basic transformations
-3. Loads the result into a PostgreSQL table named chemberta_dataset
+## Key Transformations ##
+- Standardized column names
+- Grouped gender identities into three simplified categories: `Binary`, `Nonbinary`, `Other`
+- Extracted email domains and classified them as `Personal`, `Academic`, or `Corporate`
+- Optional enrichments like name length and domain frequency
 
-### 3. Notes ###
+## Result ##
+A clean, enriched dataset loaded into PostgreSQL and ready for downstream ML modeling, analytics, or API integration.
 
-The .env file is used to manage DB credentials.
-
-The database schema will be created automatically if it doesn't exist.
-
-**Files**
-* etl_pipeline.py – Main ETL process
-* docker-compose.yml – PostgreSQL container configuration
-* requirements.txt – Python dependencies

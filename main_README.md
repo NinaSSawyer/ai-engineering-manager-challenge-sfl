@@ -1,26 +1,41 @@
-# AI Engineering Manager Technical Challenge – Nina S. Sawyer
+# AI Engineering Manager Technical Challenge – Nina S. Sawyer #
 
-This repository contains my completed technical assessment for the AI Engineering Manager position at SFL Scientific, a Deloitte Business.
+This repository contains my completed technical assessment for the AI Engineering Manager position at SFL Scientific, a Deloitte Business. It is divided into three main sections:
 
-## Repository Structure
+## Project Structure ##
 
-==> Section1_ETL/ # Database setup & Python ETL pipeline
+1. [Section 1 – Database & ETL](./section1_ETL/README.md)
+   - Dockerized PostgreSQL setup
+   - Jupyter notebook with transformations and visualizations
+   - Python-based ETL pipeline
 
-==> Section2_ModelDeployment/ # ML model training & deployment as an API
+2. [Section 2 – ML Model Deployment](./section2_ModelDeployment/README.md)
+   - Model training using Fashion MNIST
+   - API deployment via Flask and Docker
+   - Sample prediction input and endpoint usage
 
-==> Section3_Management/ # Work plan for implementing ChemBERTa
+3. [Section 3 – Work Plan for ChemBERTa Implementation](./section3_Management/README.md)
+   - Executive summary and phased project plan
+   - Gantt chart, cost table, and architectural diagram
+   - Final presentation slide deck in PDF format
 
-
-## Submission Details
-
-- **Submitted by:** Nina S. Sawyer
-- **Email:** nina@ninasawyer.com
-- **Date:** May 10, 2025
-- **Format:** Private GitHub repository
-
-Access will be granted to the following reviewers:
+## Access ##
+This is a private repository. Access has been granted to:
 - wwarne@deloitte.com
 - atolpygo@deloitte.com
 - nafragola@deloitte.com
 
-Please refer to the individual folders for instructions, documentation, and deliverables for each section.
+## Setup Overview ##
+To run each section locally, follow the instructions in the respective `README.md` files. Python packages can be installed via:
+
+```bash
+pip install -r requirements.txt
+```
+
+Docker is required for sections involving containerized PostgreSQL or API deployment.
+
+## Contact ##
+For any questions, please contact:
+**Nina S. Sawyer**  
+nina@ninasawyer.com  
+[linkedin.com/in/ninassawyer](https://www.linkedin.com/in/ninassawyer)
