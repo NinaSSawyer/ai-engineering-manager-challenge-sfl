@@ -4,7 +4,7 @@ This repository contains my completed technical assessment for the AI Engineerin
 
 ## Project Structure ##
 
-1. [Section 1 – Database & ETL](./01_section1_ETL/05_README.md)
+1. [Section 1 – Database & ETL](./01_section1_ETL/README.md)
    - Dockerized PostgreSQL setup
    - Jupyter notebook with transformations and visualizations
    - Python-based ETL pipeline
