@@ -4,17 +4,17 @@ This repository contains my completed technical assessment for the AI Engineerin
 
 ## Project Structure ##
 
-1. [Section 1 – Database & ETL](./section1_ETL/README.md)
+1. [Section 1 – Database & ETL](./01_section1_ETL/05_README.md)
    - Dockerized PostgreSQL setup
    - Jupyter notebook with transformations and visualizations
    - Python-based ETL pipeline
 
-2. [Section 2 – ML Model Deployment](./section2_ModelDeployment/README.md)
+2. [Section 2 – ML Model Deployment](./02_section2_ModelDeployment/README.md)
    - Model training using Fashion MNIST
    - API deployment via Flask and Docker
    - Sample prediction input and endpoint usage
 
-3. [Section 3 – Work Plan for ChemBERTa Implementation](./section3_Management/README.md)
+3. [Section 3 – Work Plan for ChemBERTa Implementation](./03_section3_Management/README.md)
    - Executive summary and phased project plan
    - Gantt chart, cost table, and architectural diagram
    - Final presentation slide deck in PDF format
