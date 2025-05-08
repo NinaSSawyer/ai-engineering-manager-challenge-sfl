@@ -4,10 +4,12 @@ This section provisions a PostgreSQL database using Docker and demonstrates a co
 
 ## Files ##
 
-- `docker-compose.yml` – Configures and launches a PostgreSQL container for local development
-- `requirements.txt` – Lists all Python dependencies for this ETL pipeline
-- `section1_etl_notebook.ipynb` – Main deliverable; contains code, commentary, visualizations, and transformation steps
-- `etl_pipeline.py` – Optional standalone script version of the ETL logic (can be run without Jupyter)
+- `01_docker-compose.yml` – Configures and launches a PostgreSQL container for local development
+- `02_requirements.txt` – Lists all Python dependencies for this ETL pipeline
+- `03_section1_etl_notebook.ipynb` – Main deliverable; contains code, commentary, visualizations, and transformation steps
+- `04_etl_pipeline.py` – Optional standalone script version of the ETL logic (can be run without Jupyter)
+- `output_GenderDist.png` – Visualization of original gender labels
+- `output_GenderDist_Simp.png` – Visualization of grouped gender categories
 - `README.md` – This file
 
 ## Setup Instructions ##
@@ -33,11 +35,11 @@ This will start a PostgreSQL instance locally at:
 Use the included requirements file to install dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r 02_requirements.txt
 ```
 
 ### 3. Run the Notebook ###
-Open `section1_etl_notebook.ipynb` in Jupyter or VS Code and follow each cell to:
+Open `03_section1_etl_notebook.ipynb` in Jupyter or VS Code and follow each cell to:
 - Load the Excel file
 - Inspect and clean the data
 - Apply transformations (e.g., email domain classification, gender grouping)
@@ -49,7 +51,7 @@ Open `section1_etl_notebook.ipynb` in Jupyter or VS Code and follow each cell to
 If preferred, you can run the ETL outside the notebook:
 
 ```bash
-python etl_pipeline.py
+python 04_etl_pipeline.py
 ```
 
 ## Key Transformations ##
@@ -57,6 +59,14 @@ python etl_pipeline.py
 - Grouped gender identities into three simplified categories: `Binary`, `Nonbinary`, `Other`
 - Extracted email domains and classified them as `Personal`, `Academic`, or `Corporate`
 - Optional enrichments like name length and domain frequency
+
+## 📊 Visualizations
+
+### Original Gender Distribution
+![Original Gender Distribution](./output_GenderDist.png)
+
+### Simplified Gender Group Distribution
+![Simplified Gender Distribution](./output_GenderDist_Simp.png)
 
 ## Result ##
 A clean, enriched dataset loaded into PostgreSQL and ready for downstream ML modeling, analytics, or API integration.
