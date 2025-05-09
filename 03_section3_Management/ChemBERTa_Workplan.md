@@ -64,6 +64,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 
 ## 6. Team Roles and Skillsets ##
 
+The team structure for this implementation was designed to cover the full lifecycle of an ML deployment project within a regulated pharmaceutical environment. We selected roles that span from model development and infrastructure to compliance oversight. A senior ML Engineer with ChemBERTa expertise anchors the modeling effort, supported by a Data Engineer for preprocessing and ingestion workflows. An MLOps Engineer ensures that the model can be deployed, monitored, and retrained in a scalable way. A Project Manager oversees delivery and coordination, while a part-time Compliance Lead ensures the project adheres to industry regulations without bloating staffing costs.
+
 |Role                    |Level	     |Skills Required                                     |Quantity|
 |------------------------|:---------:|:--------------------------------------------------:|-------:|
 |ML Engineer (ChemBERTa) |Senior	 |NLP models, transformers, fine-tuning, PyTorch      |       1|
@@ -74,6 +76,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 
 ## 7. Cost Estimates ##
 
+Our cost estimates reflect a realistic mid-tier outlook for a pilot-phase ML deployment in a pharmaceutical context. Personnel costs were projected using a fully loaded monthly rate of $15,000 per team member, which includes salary, benefits, and overhead. Cloud compute costs account for GPU use during training as well as inference-time deployment in a Kubernetes-based system. We included modest tooling costs for services like MLflow or hosted monitoring platforms, while allowing room for open-source implementations. These estimates are designed to scale up or down depending on BPC’s long-term infrastructure commitments.
+
 |Resource                   |Estimated Monthly Cost|Notes                                          |
 |---------------------------|:--------------------:|-----------------------------------------------|
 |Cloud compute (GPU, dev)   |$2,500	               |Fine-tuning & prototype workloads              |
@@ -83,6 +87,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 |Total Monthly Estimate     |$79,200               |Includes a moderate assumption for FTE         |
 
 ## 8. Risks and Mitigation Strategies ##
+
+This risk matrix was developed to reflect the most common challenges observed in real-world pharmaceutical AI deployments. Given that ChemBERTa is a relatively new model in the cheminformatics space, underperformance on internal datasets is a credible risk. We mitigate this through early benchmarking and phase-gated fine-tuning. Regulatory opacity is addressed by integrating interpretability frameworks and aligning documentation with compliance frameworks like Good Practice. We also acknowledge organizational friction (particularly where infrastructure or skill gaps exist) and plan for those with modular, container-based deployment and onboarding support.
 
 |Risk                                     |Mitigation Strategy                                     |
 |-----------------------------------------|--------------------------------------------------------|
@@ -96,6 +102,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 |Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki          |
 
 ## 9. Timeline and Deliverables ##
+
+The proposed timeline is structured across five phases over a 12-week period, with each stage building upon the prior. Data Readiness and Prototype Integration are prioritized early to enable a strong technical foundation. Infrastructure work runs in parallel with model iteration to reduce idle time. Validation and compliance milestones are scheduled after internal benchmarks are met to ensure traceability, while the final phase focuses on transitioning the solution into monitored production. This timeline reflects typical cycle times for similar pilots and can be compressed or extended depending on available resources.
 
 ![Timeline and Deliverable Dependencies](./chemberta_gantt_chart.png)
 

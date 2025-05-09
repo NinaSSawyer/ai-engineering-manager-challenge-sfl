@@ -60,7 +60,7 @@ python 04_etl_pipeline.py
 - Extracted email domains and classified them as `Personal`, `Academic`, or `Corporate`
 - Optional enrichments like name length and domain frequency
 
-## 📊 Visualizations
+## Visualizations
 
 ### Original Gender Distribution
 ![Original Gender Distribution](./output_GenderDist.png)
