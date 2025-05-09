@@ -1,17 +1,3 @@
-# ChemBERTa Implementation Work Plan for BPC
-
-## 1. Executive Summary
-BPC seeks to improve how it represents molecules for downstream property prediction by adopting ChemBERTa — a machine learning model that generates chemical “fingerprints” from SMILES strings. This work plan outlines a modular, phased approach to integrating ChemBERTa into BPC’s existing infrastructure. The plan focuses on enhancing chemical screening accuracy while meeting regulatory standards, supporting future scalability, and enabling rapid internal experimentation.
-
-## 2. Current State Analysis
-*Note: This section reflects the implementation team's best-practice assumptions based on typical pharmaceutical infrastructure and the prompt's statement that BPC has a "competent IT/cloud team but no prior experience with AI/ML workloads."*
-...
-
-## 10. Summary and Next Steps
-This work plan presents a modular, phased approach for implementing ChemBERTa as BPC’s foundation for modern chemical fingerprinting and molecular property prediction. The outlined architecture, infrastructure, and compliance strategies ensure the solution is not only technically sound but also aligned with pharmaceutical regulatory standards.
-
-Upon approval, we recommend scheduling a project kickoff meeting to align stakeholders, confirm infrastructure readiness, and initiate Phase 1 (data audit and dataset preparation).
-
 # ChemBERTa Implementation Work Plan for BPC # 
 
 ## 1. Executive Summary ##
@@ -84,23 +70,29 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 |Project Manager         |Mid        |Agile delivery, stakeholder coordination            |       1|
 |Compliance Lead         |Mid        |Pharma regulation, documentation, audit trail design| 0.5 FTE|
 
-7. Cost Estimates
-Resource	Estimated Monthly Cost	Notes
-Cloud compute (GPU, dev)	$2,500	Fine-tuning & prototype workloads
-Cloud compute (inference)	$1,200	Kubernetes autoscaling + storage
-Personnel (5 team members)	$75,000	Assumes avg fully loaded cost of $15,000/month
-Tools (MLflow, monitoring)	$500	May leverage open-source alternatives
-Total Monthly Estimate	$79,200	$64,200
-8. Risks and Mitigation Strategies
-Risk	Mitigation Strategy
-Model underperforms on internal datasets	Conduct early benchmarking and property-specific fine-tuning using curated internal datasets
-Regulatory rejection due to opacity	Leverage explainability tools (e.g., SHAP, attention maps) and document with GxP/FDA Part 11 in mind
-Infrastructure mismatch	Use OCI-compliant containers and integrate with existing API gateways and security standards
-Team lacks ChemBERTa familiarity	Upskill via onboarding sessions, internal wiki, and support from external subject matter consultants
-Model underperforms on internal datasets	Conduct property-specific fine-tuning and data curation
-Regulatory rejection due to opacity	Incorporate explainability tools (e.g., SHAP, attention maps)
-Infrastructure mismatch	Build modular containerized APIs with internal standards
-Team lacks ChemBERTa familiarity	Upskill via onboarding sessions, internal wiki
+## 7. Cost Estimates ##
+
+|Resource                   |Estimated Monthly Cost|Notes                                          |
+|---------------------------|:--------------------:|-----------------------------------------------|
+|Cloud compute (GPU, dev)   |$2,500	               |Fine-tuning & prototype workloads              |
+|Cloud compute (inference)  |$1,200     	       |Kubernetes autoscaling + storage               |
+|Personnel (5 team members) |$75,000         	   |Assumes avg fully loaded cost of $15,000/month |
+|Tools (MLflow, monitoring) |$500                  |May leverage open-source alternatives          |
+|Total Monthly Estimate     |$79,200               |Includes a moderate assumption for FTE         |
+
+## 8. Risks and Mitigation Strategies ##
+
+|Risk                                     |Mitigation Strategy                                   |
+|-----------------------------------------|------------------------------------------------------|
+|Model underperforms on internal datasets |Conduct early benchmarking and property-specific fine-tuning using curated internal datasets|
+|Regulatory rejection due to opacity      |Leverage explainability tools (e.g., SHAP, attention maps) and document with GxP/FDA Part 11 in mind|
+|Infrastructure mismatch                  |Use OCI-compliant containers and integrate with existing API gateways and security standards|
+|Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki, and support from external subject matter consultants|
+|Model underperforms on internal datasets |Conduct property-specific fine-tuning and data curation|
+|Regulatory rejection due to opacity      |Incorporate explainability tools (e.g., SHAP, attention maps)|
+|Infrastructure mismatch                  |Build modular containerized APIs with internal standards|
+|Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki|
+
 9. Timeline and Deliverables
 
 Milestone Timeline
