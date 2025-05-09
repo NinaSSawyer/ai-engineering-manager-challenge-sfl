@@ -49,6 +49,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 
 ### Phase 4 – Validation & Compliance (2 weeks) ###
 
+![Technical Architecture Overview](./chemberta_pipeline_architecture.png)
+
 *  Run audit trail simulations for model explainability and data lineage
 *  Apply versioning strategy for reproducibility (e.g., DVC or MLflow)
 *  Generate documentation for internal compliance and approval boards
@@ -94,6 +96,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 |Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki          |
 
 ## 9. Timeline and Deliverables ##
+
+![Timeline and Deliverable Dependencies](./chemberta_gantt_chart.png)
 
 ### Milestone Timeline ###
 
