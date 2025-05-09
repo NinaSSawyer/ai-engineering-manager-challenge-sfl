@@ -10,10 +10,10 @@ This folder contains the full work plan document submitted as part of the AI Eng
 
 > This document proposes a phased implementation strategy for integrating ChemBERTa into BPC's infrastructure to enable chemical fingerprinting for molecular property prediction.
 
-## Visualizations
+## Visualizations ##
 
-### Original Gender Distribution
+### Technical Architecture Overview ### 
 ![Technical Architecture Overview](./chemberta_pipeline_architecture.png)
 
-### Simplified Gender Group Distribution
+### Timeline and Deliverable Dependencies ###
 ![Timeline and Deliverable Dependencies](./chemberta_gantt_chart.png)
