@@ -4,7 +4,7 @@ import tensorflow as tf
 import numpy as np
 
 #Load the trained model
-model = tf.keras.models.load_model("../fashion_mnist_model.h5")
+model = tf.keras.models.load_model("fashion_mnist_model.h5")
 
 #Define class labels (optional, for readability)
 class_labels = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
