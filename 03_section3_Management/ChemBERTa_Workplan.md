@@ -16,6 +16,8 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 
 ## 4. Technical Architecture Overview ## 
 
+![Technical Architecture Overview](./chemberta_pipeline_architecture.png)
+
 ### Pipeline components: ###
 
 *  Input Layer: SMILES strings are ingested from laboratory information management systems (LIMS), electronic lab notebooks (ELNs), or internal compound databases. Ingestion can be batch-based (CSV uploads) or API-driven (real-time).
@@ -48,8 +50,6 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 *  Deliverables: Dockerized model API, secured model registry, internal API endpoint
 
 ### Phase 4 – Validation & Compliance (2 weeks) ###
-
-![Technical Architecture Overview](./chemberta_pipeline_architecture.png)
 
 *  Run audit trail simulations for model explainability and data lineage
 *  Apply versioning strategy for reproducibility (e.g., DVC or MLflow)
