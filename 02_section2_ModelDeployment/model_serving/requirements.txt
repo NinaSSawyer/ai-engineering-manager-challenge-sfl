@@ -1,0 +1,4 @@
+#Lists packages needed to run training + serving
+flask
+tensorflow
+numpy

@@ -1,6 +1,7 @@
 # Section 2 – ML Model Deployment #
 
 This section demonstrates deployment of a machine learning model (Fashion MNIST) as an API service using Flask and Docker.
+Demonstrates training of Convolutional Neural Network (CNN) on the Fashion MNIST dataset using TensorFlow/Keras
 
 ## Tools & Technologies ##
 
