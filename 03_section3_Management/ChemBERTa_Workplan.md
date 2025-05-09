@@ -82,26 +82,30 @@ BPC has a capable IT and cloud infrastructure team but lacks hands-on experience
 
 ## 8. Risks and Mitigation Strategies ##
 
-|Risk                                     |Mitigation Strategy                                   |
-|-----------------------------------------|------------------------------------------------------|
+|Risk                                     |Mitigation Strategy                                     |
+|-----------------------------------------|--------------------------------------------------------|
 |Model underperforms on internal datasets |Conduct early benchmarking and property-specific fine-tuning using curated internal datasets|
 |Regulatory rejection due to opacity      |Leverage explainability tools (e.g., SHAP, attention maps) and document with GxP/FDA Part 11 in mind|
 |Infrastructure mismatch                  |Use OCI-compliant containers and integrate with existing API gateways and security standards|
 |Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki, and support from external subject matter consultants|
-|Model underperforms on internal datasets |Conduct property-specific fine-tuning and data curation|
+|Model underperforms on internal datasets |Conduct property-specific fine-tuning and data curation |
 |Regulatory rejection due to opacity      |Incorporate explainability tools (e.g., SHAP, attention maps)|
 |Infrastructure mismatch                  |Build modular containerized APIs with internal standards|
-|Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki|
+|Team lacks ChemBERTa familiarity         |Upskill via onboarding sessions, internal wiki          |
 
-9. Timeline and Deliverables
+## 9. Timeline and Deliverables ##
 
-Milestone Timeline
-Phase	Week(s)	Key Deliverables
-Phase 1 – Data Readiness	1–2	Dataset audit, benchmark-ready dataset, metadata schema
-Phase 2 – Prototype Integration	3–5	Fine-tuned ChemBERTa model, performance metrics, UMAP plots
-Phase 3 – Infrastructure	6–8	Containerized model, internal test endpoint, registry storage
-Phase 4 – Validation & Compliance	9	Audit trail documentation, versioned configs, compliance package
-Phase 5 – Operationalization	10	Monitoring tools, retraining scripts, training material
-10. Summary and Next Steps
+### Milestone Timeline ###
+
+|Phase                              |Week(s)|Key Deliverables                                      |
+|-----------------------------------|:-----:|------------------------------------------------------|
+|Phase 1 – Data Readiness           |1–2    |Dataset audit, benchmark-ready dataset, metadata schema|
+|Phase 2 – Prototype Integration    |3–5    |Fine-tuned ChemBERTa model, performance metrics, UMAP plots|
+|Phase 3 – Infrastructure           |6–8    |Containerized model, internal test endpoint, registry storage|
+|Phase 4 – Validation & Compliance  |9–10   |Audit trail documentation, versioned configs, compliance package|
+|Phase 5 – Operationalization       |11–12  |Monitoring tools, retraining scripts, training material|
+
+## 10. Summary and Next Steps ##
 This work plan presents a modular, phased approach for implementing ChemBERTa as BPC’s foundation for modern chemical fingerprinting and molecular property prediction. The outlined architecture, infrastructure, and compliance strategies ensure the solution is not only technically sound but also aligned with pharmaceutical regulatory standards.
+
 Upon approval, we recommend scheduling a project kickoff meeting to align stakeholders, confirm infrastructure readiness, and initiate Phase 1 (data audit and dataset preparation). is designed to help BPC realize molecular prediction capabilities with enterprise-grade scalability and regulatory compliance. Upon approval, we recommend scheduling a kickoff meeting to align stakeholders and begin Phase 1 (data audit + infrastructure prep).
