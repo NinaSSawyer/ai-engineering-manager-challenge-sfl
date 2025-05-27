@@ -19,12 +19,6 @@ This repository contains my completed technical assessment for the AI Engineerin
    - Gantt chart, cost table, and architectural diagram
    - Final presentation slide deck in PDF format
 
-## Access ##
-This is a private repository. Access has been granted to:
-- wwarne@deloitte.com
-- atolpygo@deloitte.com
-- nafragola@deloitte.com
-
 ## Setup Overview ##
 To run each section locally, follow the instructions in the respective `README.md` files. Python packages can be installed via:
 
